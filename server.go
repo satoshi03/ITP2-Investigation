@@ -20,7 +20,7 @@ func redirectHandler(c *fasthttp.RequestCtx) {
 	cookie.SetKey("ADUID")
 	cookie.SetValue(uuid.NewRandom().String())
 	cookie.SetExpire(time.Now().AddDate(1, 0, 0))
-	cookie.SetDomain(".ad-vendor1.com")
+	cookie.SetDomain(".ad-vendor.com")
 	cookie.SetPath("/")
 	c.Response.Header.SetCookie(&cookie)
 
