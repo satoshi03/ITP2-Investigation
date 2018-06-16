@@ -1,0 +1,10 @@
+<html>
+  <head>
+    <script>
+      var id = "test-ad-uid";
+      var expire = new Date((new Date()).getTime() + (365 * 24 * 3600 * 1000)); // 1 year
+      document.cookie = 'ADUID=' + id + '; path=/; domain=.ad-vendor1.com; expires=' + expire.toUTCString() + ";";
+      location.href = "http://www.advertiser.com/advertiser/lp.html";
+    </script>
+  </head>
+</html>
